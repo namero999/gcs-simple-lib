@@ -7,9 +7,9 @@ import com.creonomy.gcslib.GCSAPIImpl;
 
 public class Main {
 
-    private static String projectId = "36724130837";
+    private static String projectId = "Yout project ID";
 
-    private static String certificatePath = "12e26dc97695bdf06a36b36034767110e8f917fa-privatekey.p12";
+    private static String certificatePath = "Your .p12 certificate path";
 
     public static void main(String[] args) throws Exception {
 
