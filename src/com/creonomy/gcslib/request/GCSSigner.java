@@ -1,5 +1,6 @@
 package com.creonomy.gcslib.request;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.net.URLEncoder;
 import java.security.KeyStore;
@@ -23,12 +24,12 @@ public class GCSSigner {
 
     private Signature signer;
 
-    public GCSSigner(String certificatePath) throws GCSException {
+    public GCSSigner(File certificate) throws GCSException {
 
         try {
 
             KeyStore ks = KeyStore.getInstance("PKCS12");
-            ks.load(new FileInputStream(certificatePath), password);
+            ks.load(new FileInputStream(certificate), password);
             PrivateKey key = (PrivateKey) ks.getKey("privatekey", password);
 
             signer = Signature.getInstance("SHA256withRSA");

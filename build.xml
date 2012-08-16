@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GCSLib" default="dist">
+
+    <property name="src" value="src" />
+    <property name="bin" value="ant-bin" />
+    <property name="dist" value="dist" />
+    <property name="libraries" value="../../Java Libraries" />
+
+    <path id="classpath">
+        <fileset dir="${libraries}/Commons" includes="*.jar" />
+    </path>
+
+    <target name="clean">
+        <delete dir="${bin}" />
+        <delete dir="${dist}" />
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${bin}" />
+        <javac srcdir="${src}" destdir="${bin}" debug="true" includeantruntime="false">
+            <classpath refid="classpath" />
+        </javac>
+        <copy todir="${bin}">
+            <fileset dir="${src}" excludes="**/*.java" />
+        </copy>
+    </target>
+
+    <target name="dist" depends="compile">
+        <mkdir dir="${dist}" />
+        <jar jarfile="${dist}/GCSLib.jar" basedir="${bin}" />
+        <delete dir="${bin}" />
+    </target>
+
+</project>

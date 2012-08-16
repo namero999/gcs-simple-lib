@@ -3,3 +3,6 @@
 *.class
 *.p12
 *~
+bin/
+dist/
+META-INF/

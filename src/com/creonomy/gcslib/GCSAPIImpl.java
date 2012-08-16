@@ -6,17 +6,17 @@ import java.io.IOException;
 
 import com.creonomy.gcslib.request.GCSContent;
 import com.creonomy.gcslib.request.GCSRequest;
-import com.creonomy.gcslib.request.GCSSigner;
 import com.creonomy.gcslib.request.GCSRequest.Method;
+import com.creonomy.gcslib.request.GCSSigner;
 
 public class GCSAPIImpl implements GCSAPI {
 
     private String projectId;
     private GCSSigner signer;
 
-    public GCSAPIImpl(String projectId, String certificatePath) throws Exception {
+    public GCSAPIImpl(String projectId, File certificate) throws Exception {
         this.projectId = projectId;
-        this.signer = new GCSSigner(certificatePath);
+        this.signer = new GCSSigner(certificate);
     }
 
     @Override
