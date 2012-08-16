@@ -6,12 +6,10 @@ A simple Java library to interact with Google Cloud Storage for Developers
 Licensed under the I-dont-give-a-shit-what-you-do-with-this-code license ┌∩┐(◕_◕)┌∩┐
 
 Sample Usage:
-`
-public class Main {
 
-    private static String projectId = "36724130837";
+    private static String projectId = "your-project-id";
 
-    private static String certificatePath = "12e26dc97695bdf06a36b36034767110e8f917fa-privatekey.p12";
+    private static String certificatePath = "your-p12-certificate";
 
     public static void main(String[] args) throws Exception {
 
@@ -22,6 +20,3 @@ public class Main {
         api.insertObject("bucket999", "/test.jpg", new File("test.jpg"), true);
 
     }
-
-}
-`
