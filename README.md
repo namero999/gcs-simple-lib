@@ -1,9 +1,9 @@
 gcs-simple-lib
 ==============
 
-A simple Java library to interact with Google Cloud Storage for Developers
+A simple(r) Java library to interact with Google Cloud Storage for Developers
 
-Licensed under the I-dont-give-a-shit-what-you-do-with-this-code license ┌∩┐(◕_◕)┌∩┐
+Licensed under the Do-what-you-want-with-this-code-but-don-t-blame-me-if-the-universe-implode License.
 
 Sample Usage:
 
