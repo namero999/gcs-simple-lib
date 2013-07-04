@@ -32,7 +32,7 @@ public class GCSRequest {
 
     private GCSContent content;
 
-    private static final long DEFAULT_VALIDITY = 30; // seconds
+    private static final long DEFAULT_VALIDITY = 300; // seconds
     private long validity = DEFAULT_VALIDITY;
 
     private long expires;
@@ -150,7 +150,7 @@ public class GCSRequest {
 
     }
 
-    private Map<String, String> headers = new HashMap<String, String>();
+    private Map<String, String> headers = new HashMap<>();
     private Map<String, String> headersReadOnly = Collections.unmodifiableMap(headers);
 
     public Map<String, String> getHeaders() {
