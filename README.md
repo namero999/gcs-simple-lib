@@ -6,7 +6,7 @@ A simple(r) Java library to interact with Google Cloud Storage for Developers
 Licensed under the Do-what-you-want-with-this-code-but-don-t-blame-me-if-the-universe-implode License.
 
 Sample Usage:
-
+```java
     private static String projectId = "your-project-id";
 
     private static String certificatePath = "your-p12-certificate";
@@ -20,3 +20,4 @@ Sample Usage:
         api.insertObject("bucket999", "/test.jpg", new File("test.jpg"), true);
 
     }
+```
